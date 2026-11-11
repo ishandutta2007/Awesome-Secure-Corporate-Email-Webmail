@@ -1,134 +1,140 @@
-# Awesome-Secure-Corporate-Email-Webmail
-
 # Awesome Secure Corporate Email & Webmail
 
-> A curated list of top Secure Corporate Email and Webmail platforms — both SaaS/Hosted commercial solutions and open-source alternatives for business email with custom domains, encryption, and compliance controls.
-> 🌟 Star this repo if you find it useful! 🌟
+<div align="center">
+  <img src="assets/banner.svg" alt="Awesome Secure Corporate Email & Webmail Banner" width="100%" />
+
+  <p align="center">
+    <strong>A curated directory of top-tier Secure Corporate Email, Business Webmail, and Groupware Solutions.</strong><br />
+    Covering Enterprise SaaS suites and modern Open-Source self-hosted mail servers with custom domain routing, End-to-End Encryption (E2EE), post-quantum cryptography, and regulatory compliance (HIPAA, GDPR, PCI-DSS, SOC 2).
+  </p>
+
+  <p align="center">
+    <a href="https://github.com/ishandutta2007/Awesome-Secure-Corporate-Email-Webmail/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Secure-Corporate-Email-Webmail?style=social&color=white" alt="GitHub stars" /></a>
+    <a href="https://github.com/ishandutta2007/Awesome-Secure-Corporate-Email-Webmail/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Secure-Corporate-Email-Webmail?style=social&color=white" alt="GitHub forks" /></a>
+    <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" /></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0--1.0-blue.svg" alt="License: CC0-1.0" /></a>
+  </p>
+</div>
 
 ---
 
 ## 📋 Table of Contents
 
+- [Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
 - [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [Microsoft 365 (Exchange Online)](#microsoft-365-exchange-online)
-  - [Google Workspace](#google-workspace)
-  - [Zoho Mail](#zoho-mail)
-  - [Proton Mail Business](#proton-mail-business)
-  - [Tuta Business](#tuta-business)
-  - [Mailbox.org](#mailboxorg)
 - [Open-Source Software](#-open-source-software)
-  - [Mailflare](#mailflare)
-  - [grommunio](#grommunio)
-  - [SOGo](#sogo)
-  - [docker-mailserver](#docker-mailserver)
-  - [mox](#mox)
-- [Comparison at a Glance](#-comparison-at-a-glance)
+- [Feature Comparison Matrix](#-feature-comparison-matrix)
+- [Selection & Architecture Guide](#-selection--architecture-guide)
 - [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🌐 Sector Overview & Market Dynamics
+
+The global enterprise email, corporate webmail, and secure communication market is estimated at **$28.5 billion to $33 billion in 2026** (projected to exceed $55 billion by 2032 at a ~9.2% CAGR), driven by zero-trust architecture mandates, regulatory compliance (GDPR, HIPAA, NIS2, SOC 2), and escalating sophisticated BEC (business email compromise) threats. 
+
+Market dynamics exhibit an **extreme concentration at the top with a highly fragmented privacy and self-hosted long tail**: Microsoft 365 (Exchange Online) and Google Workspace operate as a near-duopoly commanding >85% of total enterprise seats ("winner-take-most" bundled productivity suites), while privacy-first zero-access providers (Proton, Tuta, Mailbox.org) and open-source self-hosted mail infrastructures (docker-mailserver, Stalwart, Mailcow) capture specialized niches demanding rigorous data sovereignty, zero-knowledge encryption, and exemption from proprietary telemetry.
 
 ---
 
 ## 🟦 SaaS / Hosted Platforms
 
-Commercial, cloud-hosted Secure Corporate Email and Webmail platforms. These are not open-source but are included as reference points for feature comparison.
+Commercial, cloud-hosted corporate email and webmail suites sorted in descending order of company size (valuation / annual revenue).
 
-### Microsoft 365 (Exchange Online)
-**Type:** Enterprise email with deepest compliance and security integration  
-Exchange Online is the dominant enterprise email platform, pairing natively with Outlook and the broader Microsoft 365 ecosystem. It offers 50 GB mailboxes (E1) to 100 GB (E3/E5) with unlimited in-place archive, free shared mailboxes up to 50 GB, and advanced security through Defender for Office 365 (safe attachments sandboxing, safe links, automated investigation) [citation:1]. Compliance capabilities include Purview eDiscovery, retention policies, legal hold, and Message Encryption via OME, S/MIME, and Azure RMS [citation:1]. Conditional Access through Entra ID enables device, location, and risk-based email access restrictions [citation:1]. Starting at $6-10/user/month depending on tier [citation:1][citation:4].  
-**Best for:** Enterprises needing maximum compliance depth, security integration, and native Outlook/Office workflows.
-
-### Google Workspace
-**Type:** Cloud email with simplicity and cross-platform flexibility  
-Google Workspace (Gmail for Business) provides 30 GB pooled storage on Starter plans (shared across Gmail, Drive, and Photos), rising to 2-5 TB on higher tiers [citation:1]. Security includes anti-phishing, malware scanning, and S/MIME on Enterprise Plus, with context-aware access through Google's zero-trust model [citation:1]. Gmail's interface is familiar and accessible, with strong cross-platform support. Compliance tools include Vault for retention and eDiscovery, though less granular than Microsoft Purview [citation:1]. Starting at $6-7/user/month [citation:1][citation:11].  
-**Best for:** Teams prioritizing simplicity and Google ecosystem integration over deep compliance controls.
-
-### Zoho Mail
-**Type:** Budget-friendly business email with custom domains  
-Zoho Mail offers the lowest entry price among major providers at $1/user/month for Mail Lite (5-10 GB), with a free plan for up to five users in eligible regions [citation:4]. Paid plans include custom domains, aliases, shared calendars, MFA, migration tools, and SPF/DKIM/DMARC configuration [citation:4]. Mail Premium ($4/user/month) adds S/MIME, eDiscovery, email archiving, and 50 GB mailbox plus 50 GB retention storage [citation:4]. The interface is less familiar than Gmail or Outlook, and the free plan excludes IMAP/POP/ActiveSync [citation:4].  
-**Best for:** Small teams and budget-conscious organizations wanting professional email without a full productivity suite subscription.
-
-### Proton Mail Business
-**Type:** Privacy-first email with zero-access encryption  
-Proton Mail Business offers end-to-end encryption with a zero-access architecture that even Proton cannot bypass, independently audited by Securitum and Cure53 [citation:8][citation:5]. Business plans include custom domains, Bridge integration for Outlook/Thunderbird/Apple Mail, and compliance support for HIPAA, GDPR, PCI-DSS, and SOC 2 Type II [citation:8]. **Limitations:** Subject lines remain unencrypted, search only covers sender addresses without downloading messages, and post-quantum encryption is opt-in since May 2026 [citation:5][citation:8]. Pricing starts at $6.99/user/month [citation:12].  
-**Best for:** Organizations in regulated industries (legal, healthcare) prioritizing privacy by design over deep productivity integration.
-
-### Tuta Business
-**Type:** Maximum encryption with post-quantum readiness  
-Tuta encrypts subject lines alongside body and attachments, unlike most encrypted services, with post-quantum TutaCrypt (CRYSTALS-Kyber + x25519 + AES-256) standard since March 2024 [citation:5][citation:8]. Business features include custom domains, unlimited aliases, shared mailboxes, admin roles, and whitelabel branding on Unlimited [citation:8]. Data resides on ISO 27001-certified servers in Germany. **Critical limitation:** No IMAP/POP3 support—only Tuta's own apps can be used, making it incompatible with existing email clients and workflows [citation:5][citation:8].  
-**Best for:** Organizations with maximum metadata protection needs that can accept a complete workflow change.
-
-### Mailbox.org
-**Type:** Privacy-focused email with full protocol compatibility  
-Mailbox.org offers the best compatibility among privacy-focused providers, with full IMAP/POP3 support so any standard email client works without proprietary software [citation:5]. PGP encryption can be configured directly in the familiar client, and cloud storage/office tools are bundled in the same subscription [citation:5]. **Trade-offs:** No permanent free tier, and encryption is optional and must be actively configured rather than default-on [citation:5].  
-**Best for:** Small businesses and teams wanting privacy features without abandoning existing email clients or workflows.
+| Provider | Company Scale (Valuation / Revenue) | Starting Pricing (Paid) | Free Tier Limits / Free Trial | Key Security & Cryptography | Primary Use Case |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **[Microsoft 365 (Exchange Online)](https://www.microsoft.com/microsoft-365/exchange/exchange-online)** | **$3.1 Trillion market cap** (~$245B annual revenue) | **$6.00/user/month** (Exchange Online Plan 1, annual commitment) | **30-day free trial** (up to 25 user seats, 50 GB mailbox storage per user, full Purview compliance trial) | Defender for O365 sandboxing, Safe Links, OME, S/MIME, Azure RMS, Entra ID Conditional Access | Enterprises requiring deep compliance, DLP, and native Outlook ecosystem |
+| **[Google Workspace](https://workspace.google.com/)** | **$2.2 Trillion market cap** (Alphabet; ~$350B annual revenue) | **$6.00/user/month** (Business Starter, annual commitment; or $7.20/user/month flexible) | **14-day free trial** (up to 10 user seats, 30 GB pooled storage per user, full Google Workspace apps) | Zero-trust context-aware access, Google Safe Browsing, S/MIME (Enterprise tiers), Vault eDiscovery | Modern businesses prioritizing real-time collaboration and cloud-native workflows |
+| **[Zoho Mail](https://www.zoho.com/mail/)** | **~$1.4 Billion annual revenue** (Privately held, estimated valuation $10B–$15B) | **$1.00/user/month** (Mail Lite, 5 GB storage; billed annually) | **Free Forever Plan** (up to 5 users, 5 GB storage/user, 25 MB attachment limit, webmail/mobile app access; excludes IMAP/POP) | S/MIME, TLS encryption, integrated eDiscovery, retention policies, SPF/DKIM/DMARC wizards | Startups and budget-conscious teams wanting custom domain business email |
+| **[Proton Mail Business](https://proton.me/business/mail)** | **~$100 Million ARR** (Privately held / Foundation backed; estimated valuation $1.5B–$2B) | **$6.99/user/month** (Mail Professional, billed annually; or $7.99/user/month billed monthly) | **Free Personal Plan** (1 user, 500 MB to 1 GB storage, 150 messages/day, no custom domains) or **14-day business trial** on request | End-to-end zero-access encryption (PGP based), zero-access storage, Swiss jurisdiction, HIPAA/GDPR BAA | Regulated industries (legal, healthcare, finance) demanding zero-access privacy |
+| **[Tuta Business](https://tuta.com/business)** | **~$10M–$20M ARR** (Privately held; estimated valuation $50M–$100M) | **€3.00/user/month** (~$3.25/user/month, Essential tier billed annually) | **Free Personal Plan** (1 user, 1 GB storage, Tuta domain only) or **14-day money-back guarantee / business evaluation** | Post-quantum hybrid encryption (TutaCrypt: Kyber + x25519 + AES-256), encrypted subject lines & search index, German jurisdiction | Zero-metadata privacy teams needing post-quantum cryptographic protection |
+| **[Mailbox.org](https://mailbox.org/en/business)** | **~$5M–$10M ARR** (Privately held / Heinlein Support; estimated valuation $20M–$40M) | **€1.00/user/month** (~$1.08/user/month, Light tier; or €3.00/user/month Standard with custom domain) | **30-day free trial** (Full feature access, test credit included, no payment details required upfront) | Integrated PGP encryption, DANE/DNSSEC, German servers, 100% green energy data centers | Teams wanting European data privacy with native IMAP/POP3 desktop client compatibility |
 
 ---
 
 ## 🟩 Open-Source Software
 
-Self-hosted, community-driven Secure Corporate Email and Webmail tools. The open-source ecosystem spans **full email platforms**, **groupware servers**, and **Docker-based mail servers**.
+Self-hosted, community-driven corporate email and webmail systems, groupware servers, and containerized mail stacks. Sorted in descending order of GitHub stargazers:
 
-### Mailflare
-**Stack:** Node.js / SQLite / Cloudflare or Docker | **License:** AGPL-3.0  
-Mailflare is an open-source, self-hosted custom domain email inbox positioned as a Google Workspace alternative [citation:7][citation:14]. It provides mailboxes, shared inboxes, calendar with invitations, public booking pages, routing rules, an AI assistant, and an MCP endpoint for AI agents [citation:7]. Mail is sent and received through Resend (3,000 emails/month free tier), Amazon SES, or Cloudflare, avoiding per-seat fees entirely [citation:7]. Deploys as a single container with SQLite storage on Railway or Docker, with no PostgreSQL/Redis/object storage dependencies [citation:7]. **Important:** Railway does not accept inbound SMTP on port 25, so you need a separate mail provider account for sending/receiving [citation:7]. Supports 34 languages and imports from IMAP, Gmail Takeout, .eml, and .mbox [citation:14].  
-**Best for:** Small teams wanting custom domain email with calendar, booking, and AI features without per-user fees, accepting the dependency on an external mail provider for SMTP.
-
-### grommunio
-**Stack:** C / PHP | **License:** Open Source (with commercial support)  
-grommunio is a modern digital communication and collaboration platform positioned as a full replacement for Microsoft Exchange and Outlook [from previous context]. Its web application provides email, advanced calendaring, contacts, tasks, and notes with shared/public folders, delegates, rules, out-of-office, meeting requests, and free/busy [citation:9]. Security features include S/MIME and OpenPGP signing/encryption (OpenPGP keys never leave the browser), with certifications through independent security research [citation:9]. The interface is polished with light/dark mode, command palette, and keyboard shortcuts, translated into 80+ languages [citation:9]. Scales to tens of thousands of concurrent sessions [citation:9].  
-**Best for:** Organizations migrating from Microsoft Exchange wanting a drop-in open-source replacement with native ActiveSync and strong webmail.
-
-### SOGo
-**Stack:** Objective-C | **License:** GPL/LGPL v2+  
-SOGo is a fully supported groupware server focused on scalability and open standards, providing a rich AJAX-based web interface [citation:2]. It supports CalDAV, CardDAV, GroupDAV, and **Microsoft ActiveSync**, so mobile devices (iPhone, Android, Windows Phone) can sync email, contacts, events, and tasks [citation:2]. Outlook compatibility is available via the Outlook CalDAV Synchronizer [citation:2]. Deployed in production environments with thousands of users [citation:2].  
-**Best for:** Organizations needing a standards-based groupware server with ActiveSync support and a proven track record at scale.
-
-### docker-mailserver
-**Stack:** Docker / Alpine Linux | **License:** MIT  
-docker-mailserver (jeboehm) lets you run your own email services with POP3, IMAP, and SMTP with user authentication, a web-based management interface, integrated webmail, DKIM signing, spam filtering with Rspamd, RBL-based real-time spam prevention, quota management, and full-text search [citation:10]. Deployment via Docker Compose or Kubernetes, with a DNS Validation Wizard and configuration profiles for iOS/macOS devices [citation:10]. The image is lightweight (6.4 MB) and continuously monitored for health [citation:10].  
-**Best for:** Technical teams wanting a complete, Docker-based mail server stack with webmail and spam filtering, accepting the operational overhead of running mail infrastructure.
-
-### mox
-**Stack:** Go | **License:** Open Source (Go package)  
-mox is a modern mail server written in Go, serving SMTP/IMAP/HTTPS with automatic TLS via ACME/Let's Encrypt [citation:3]. It includes admin and account web interfaces, and quickstart generates configuration files, initial passwords, DNS records, and a systemd service file on Linux [citation:3]. **Limitations:** Only implemented on Unix systems (not Windows), and running alongside an existing webserver requires forwarding HTTPS traffic for MTA-STS and autoconfig domains [citation:3].  
-**Best for:** Go-centric teams and sysadmins wanting a modern, single-binary mail server with automatic TLS and minimal configuration.
+| Software & Star Badge | Stack / Language | License | Custom Domains | Built-in Webmail | Architecture Highlights |
+| :--- | :--- | :--- | :---: | :---: | :--- |
+| **[docker-mailserver](https://github.com/docker-mailserver/docker-mailserver)** [![Stars](https://img.shields.io/github/stars/docker-mailserver/docker-mailserver?style=social&color=white)](https://github.com/docker-mailserver/docker-mailserver/stargazers) | Docker / Postfix / Dovecot | MIT | ✅ | Optional (integrates Roundcube/SnappyMail) | Battle-tested, full-featured containerized mail server. Features automated configuration, SpamAssassin/Rspamd, ClamAV, OpenDKIM, and Fail2ban out of the box. |
+| **[Stalwart](https://github.com/stalwartlabs/stalwart)** [![Stars](https://img.shields.io/github/stars/stalwartlabs/stalwart?style=social&color=white)](https://github.com/stalwartlabs/stalwart/stargazers) | Rust | AGPL-3.0 | ✅ | Optional (Web Admin & WebDAV) | All-in-one scalable mail and collaboration server written in memory-safe Rust. Native support for JMAP, IMAP4, SMTP, CalDAV, CardDAV, and Sieve. |
+| **[mailcow: dockerized](https://github.com/mailcow/mailcow-dockerized)** [![Stars](https://img.shields.io/github/stars/mailcow/mailcow-dockerized?style=social&color=white)](https://github.com/mailcow/mailcow-dockerized/stargazers) | Docker / PHP / Python | GPL-3.0 | ✅ | ✅ (SOGo integrated) | Comprehensive modern mail suite orchestrated with Docker Compose. Integrates SOGo groupware, Rspamd, ACME/Let's Encrypt automation, 2FA/FIDO2, and REST API. |
+| **[Mailu](https://github.com/Mailu/Mailu)** [![Stars](https://img.shields.io/github/stars/Mailu/Mailu?style=social&color=white)](https://github.com/Mailu/Mailu/stargazers) | Docker / Python | MIT | ✅ | ✅ (Roundcube or SnappyMail) | Modular, containerized mail distribution for Docker and Kubernetes. Simple setup wizard, admin web UI, anti-spam (Rspamd), antivirus, and relaying. |
+| **[Roundcube Webmail](https://github.com/roundcube/roundcubemail)** [![Stars](https://img.shields.io/github/stars/roundcube/roundcubemail?style=social&color=white)](https://github.com/roundcube/roundcubemail/stargazers) | PHP / JavaScript | GPL-3.0+ | ✅ | ✅ (Primary Webmail) | Industry-standard browser-based multilingual IMAP client. Features skinnable desktop-like UI, drag-and-drop, full address book with CardDAV, and PGP encryption plugins. |
+| **[Mailflare](https://github.com/hieunc229/mailflare)** [![Stars](https://img.shields.io/github/stars/hieunc229/mailflare?style=social&color=white)](https://github.com/hieunc229/mailflare/stargazers) | Node.js / SQLite | AGPL-3.0 | ✅ | ✅ (Modern Next.js) | Lightweight Google Workspace alternative with custom domains, shared inboxes, calendar bookings, AI assistant, and MCP endpoint; routes via Cloudflare/SES/Resend. |
+| **[mox](https://github.com/mjl-/mox)** [![Stars](https://img.shields.io/github/stars/mjl-/mox?style=social&color=white)](https://github.com/mjl-/mox/stargazers) | Go | MIT / Open Source | ✅ | ✅ (Built-in Webmail & Admin) | Single-binary modern mail server in Go. Automatic TLS via Let's Encrypt, ACME, SPF, DKIM, DMARC, MTA-STS, reputation tracking, and fast full-text search. |
+| **[Modoboa](https://github.com/modoboa/modoboa)** [![Stars](https://img.shields.io/github/stars/modoboa/modoboa?style=social&color=white)](https://github.com/modoboa/modoboa/stargazers) | Python / Django | ISC | ✅ | ✅ (Integrated Webmail) | Modular mail hosting and management platform with intuitive administration panel, calendar, contacts, per-domain limits, autoreply, and DMARC statistics reporting. |
+| **[SOGo](https://github.com/Alinto/sogo)** [![Stars](https://img.shields.io/github/stars/Alinto/sogo?style=social&color=white)](https://github.com/Alinto/sogo/stargazers) | Objective-C | GPL/LGPL v2+ | ✅ | ✅ (Rich AJAX Webmail) | Enterprise groupware server with native Microsoft ActiveSync (EAS), CalDAV, and CardDAV. Seamlessly syncs email, calendars, and contacts across Android, iOS, and Outlook. |
+| **[iRedMail](https://github.com/iredmail/iRedMail)** [![Stars](https://img.shields.io/github/stars/iredmail/iRedMail?style=social&color=white)](https://github.com/iredmail/iRedMail/stargazers) | Shell / Python / OpenBSD | GPL-2.0 | ✅ | ✅ (Roundcube integrated) | Zero-cost script installer creating an enterprise-grade mail server on Linux/BSD using Postfix, Dovecot, Nginx, and OpenLDAP or MariaDB/PostgreSQL backends. |
+| **[SnappyMail](https://github.com/the-djmaze/snappymail)** [![Stars](https://img.shields.io/github/stars/the-djmaze/snappymail?style=social&color=white)](https://github.com/the-djmaze/snappymail/stargazers) | PHP / JavaScript | AGPL-3.0 | ✅ | ✅ (Ultra-fast Webmail) | Modern, blazing-fast, lightweight webmail client (forked from RainLoop) optimized for speed, minimal RAM consumption, OpenPGP, S/MIME, and 2FA authentication. |
+| **[chasquid](https://github.com/albertito/chasquid)** [![Stars](https://img.shields.io/github/stars/albertito/chasquid?style=social&color=white)](https://github.com/albertito/chasquid/stargazers) | Go | Apache-2.0 | ✅ | ❌ (SMTP MTA engine) | Zero-headache SMTP server written in Go with automated Let's Encrypt TLS certificates, Dovecot authentication integration, and strict security hygiene. |
+| **[grommunio](https://github.com/grommunio/grommunio-web)** [![Stars](https://img.shields.io/github/stars/grommunio/grommunio-web?style=social&color=white)](https://github.com/grommunio/grommunio-web/stargazers) | C / PHP | AGPL-3.0 | ✅ | ✅ (Exchange-like Webmail) | Drop-in open-source Microsoft Exchange replacement supporting native MAPI/RPC, EAS ActiveSync, S/MIME, OpenPGP, video meetings, and chat collaboration. |
 
 ---
 
-## 📊 Comparison at a Glance
+## 📊 Feature Comparison Matrix
 
-| Software | License | Stack | Custom Domain | Encryption | Self-Hosted | Best For |
-|----------|---------|-------|---------------|------------|-------------|----------|
-| **Microsoft 365** | Proprietary | Cloud | ✅ | OME/S/MIME/RMS | ❌ | Enterprise compliance depth |
-| **Google Workspace** | Proprietary | Cloud | ✅ | TLS/S/MIME (Ent+) | ❌ | Simplicity + Google ecosystem |
-| **Zoho Mail** | Proprietary | Cloud | ✅ | S/MIME (Premium) | ❌ | Budget business email |
-| **Proton Mail** | Proprietary | Cloud | ✅ | E2E zero-access | ❌ | Regulated privacy needs |
-| **Tuta** | Proprietary | Cloud | ✅ | E2E + post-quantum | ❌ | Maximum metadata protection |
-| **Mailbox.org** | Proprietary | Cloud | ✅ | PGP (optional) | ❌ | Privacy + IMAP compatibility |
-| **Mailflare** | AGPL-3.0 | Node.js/SQLite | ✅ | (Via provider) | ✅ | No per-seat custom domain email |
-| **grommunio** | Open Source | C/PHP | ✅ | S/MIME/OpenPGP | ✅ | Exchange replacement |
-| **SOGo** | GPL/LGPL | Objective-C | ✅ | (Via clients) | ✅ | Standards-based groupware |
-| **docker-mailserver** | MIT | Docker | ✅ | TLS/DKIM | ✅ | Complete Docker mail stack |
-| **mox** | Open Source | Go | ✅ | Auto TLS | ✅ | Single-binary modern server |
+| Solution | Deployment | License | Custom Domains | Encryption At-Rest / In-Transit | IMAP / POP3 / SMTP | ActiveSync / CalDAV / CardDAV |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: |
+| **Microsoft 365** | Cloud SaaS | Commercial | ✅ | BitLocker, TLS, S/MIME, OME | ✅ | Native Exchange / ActiveSync |
+| **Google Workspace** | Cloud SaaS | Commercial | ✅ | AES-256, TLS, S/MIME (Ent+) | ✅ | CalDAV, CardDAV, Gmail API |
+| **Zoho Mail** | Cloud SaaS | Commercial | ✅ | AES-256, S/MIME (Premium) | Paid tiers | CalDAV, CardDAV, ActiveSync |
+| **Proton Mail** | Cloud SaaS | Commercial | ✅ | End-to-End Zero-Access, PGP | Bridge app | Proprietary Proton Bridge |
+| **Tuta Business** | Cloud SaaS | Commercial | ✅ | TutaCrypt (Post-Quantum Hybrid) | ❌ (Native apps only) | Proprietary synced apps |
+| **Mailbox.org** | Cloud SaaS | Commercial | ✅ | PGP, DANE, SSL/TLS | ✅ | CalDAV, CardDAV, ActiveSync |
+| **docker-mailserver** | Self-Hosted | MIT | ✅ | TLS 1.3, DKIM, Postfix/Dovecot | ✅ | Integrable |
+| **Stalwart** | Self-Hosted | AGPL-3.0 | ✅ | TLS 1.3, ACME, JMAP, Sieve | ✅ | CalDAV, CardDAV, WebDAV |
+| **mailcow** | Self-Hosted | GPL-3.0 | ✅ | TLS, Rspamd, S/MIME via UI | ✅ | SOGo ActiveSync, CalDAV |
+| **Mailu** | Self-Hosted | MIT | ✅ | TLS, Rspamd, ClamAV | ✅ | Integrable |
+| **Roundcube** | Self-Hosted | GPL-3.0+ | ✅ | Client-side PGP / SSL/TLS | IMAP web frontend | CardDAV plugin |
+| **Mailflare** | Self-Hosted | AGPL-3.0 | ✅ | External Provider (SES/Resend) | Via Provider API | CalDAV booking system |
+| **mox** | Self-Hosted | Open Source | ✅ | Auto Let's Encrypt TLS, DMARC | ✅ | IMAP4rev1, SMTP |
+| **Modoboa** | Self-Hosted | ISC | ✅ | TLS, Postfix/Dovecot integration | ✅ | CalDAV, CardDAV |
+| **SOGo** | Self-Hosted | GPL/LGPL | ✅ | TLS via reverse proxy | Client interface | Native ActiveSync, CalDAV |
+| **iRedMail** | Self-Hosted | GPL-2.0 | ✅ | SSL/TLS, OpenDKIM, Amavis | ✅ | SOGo / CalDAV optional |
+| **SnappyMail** | Self-Hosted | AGPL-3.0 | ✅ | OpenPGP, S/MIME, TLS | IMAP web frontend | CalDAV address book |
+| **chasquid** | Self-Hosted | Apache-2.0 | ✅ | Auto Let's Encrypt TLS, SPF | SMTP engine only | N/A (MTA) |
+| **grommunio** | Self-Hosted | AGPL-3.0 | ✅ | S/MIME, OpenPGP browser keys | ✅ | Native ActiveSync & MAPI |
+
+---
+
+## 🎯 Selection & Architecture Guide
+
+Choosing between SaaS corporate email and self-hosted open-source groupware depends on your operational capacity and regulatory obligations:
+
+1. **Enterprise Productivity & Compliance:**
+   - Choose **Microsoft 365** if your organization requires automated eDiscovery, legal hold, Purview DLP, and tight Windows/Outlook Active Directory integration.
+   - Choose **Google Workspace** for agile startups needing seamless Google Docs/Meet synergy and straightforward administration.
+
+2. **Zero-Trust Privacy & Anti-Surveillance:**
+   - Choose **Proton Mail Business** for Swiss-jurisdiction zero-access encryption while retaining desktop clients via Proton Bridge.
+   - Choose **Tuta Business** for maximum resistance against quantum computing decryption (TutaCrypt) and encrypted metadata.
+
+3. **Self-Hosted Complete Suites:**
+   - Choose **mailcow: dockerized** or **grommunio** for an out-of-the-box Exchange replacement with ActiveSync mobile synchronization and a webmail UI.
+   - Choose **docker-mailserver** for a robust headless mail infrastructure configured via clean environment variables and files.
+   - Choose **Stalwart** for a state-of-the-art Rust implementation supporting JMAP and modern web standards.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you know of an open-source Secure Corporate Email or Webmail tool that should be listed here, please open a pull request with:
-
-- Project name and URL
-- Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
-
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source. Note that the open-source ecosystem **splits** between **full email platforms with webmail** (Mailflare, grommunio, SOGo), **Docker-based mail server stacks** (docker-mailserver), and **single-binary modern servers** (mox). **Mailflare** is the most direct Google Workspace alternative for small teams wanting custom domain email without per-seat fees, though it depends on an external provider for SMTP [citation:7]. **grommunio** is the strongest Exchange replacement with native ActiveSync and a polished webmail interface [citation:9]. For teams wanting maximum privacy, **Tuta** offers the strongest encryption defaults (including subject lines and post-quantum) but requires abandoning standard email clients entirely [citation:5][citation:8].
+Contributions, fixes, and recommendations are welcome! Please follow these criteria:
+- Open-source tools must be actively maintained (commit/release within the last 12 months) and have a clean permissive or copyleft license.
+- To suggest additions, submit a Pull Request specifying:
+  - Repository link and official website
+  - Primary language stack and architecture model
+  - Distinguishing features (security, protocol support, encryption)
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
+This repository and curated list are licensed under [CC0 1.0 Universal](LICENSE) (Public Domain Dedication). All linked software projects and trademarks remain property of their respective owners.
 
----
-
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+<div align="center">
+  <sub>Maintained with ❤️ for secure corporate communications and digital sovereignty.</sub>
+</div>
