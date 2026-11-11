@@ -1,18 +1,21 @@
-# Awesome Secure Corporate Email & Webmail
+# 🛡️ Awesome Secure Corporate Email & Webmail
 
 <div align="center">
   <img src="assets/banner.svg" alt="Awesome Secure Corporate Email & Webmail Banner" width="100%" />
 
   <p align="center">
-    <strong>A curated directory of top-tier Secure Corporate Email, Business Webmail, and Groupware Solutions.</strong><br />
-    Covering Enterprise SaaS suites and modern Open-Source self-hosted mail servers with custom domain routing, End-to-End Encryption (E2EE), post-quantum cryptography, and regulatory compliance (HIPAA, GDPR, PCI-DSS, SOC 2).
+    <strong>✨ A curated directory of top-tier Secure Corporate Email, Business Webmail, and Groupware Solutions. ✨</strong><br />
+    🚀 Covering Enterprise SaaS suites and modern Open-Source self-hosted mail servers with custom domain routing, End-to-End Encryption (E2EE), post-quantum cryptography, and regulatory compliance (HIPAA, GDPR, PCI-DSS, SOC 2). 🔐
   </p>
 
   <p align="center">
+    <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+    <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
     <a href="https://github.com/ishandutta2007/Awesome-Secure-Corporate-Email-Webmail/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Secure-Corporate-Email-Webmail?style=social&color=white" alt="GitHub stars" /></a>
     <a href="https://github.com/ishandutta2007/Awesome-Secure-Corporate-Email-Webmail/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Secure-Corporate-Email-Webmail?style=social&color=white" alt="GitHub forks" /></a>
-    <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" /></a>
+    <a href="https://github.com/ishandutta2007/wAwesome-Awesome-Awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0--1.0-blue.svg" alt="License: CC0-1.0" /></a>
+    <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
   </p>
 </div>
 
@@ -20,29 +23,31 @@
 
 ## 📋 Table of Contents
 
-- [Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
-- [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-- [Open-Source Software](#-open-source-software)
-- [Feature Comparison Matrix](#-feature-comparison-matrix)
-- [Selection & Architecture Guide](#-selection--architecture-guide)
-- [Contributing](#-contributing)
-- [License](#-license)
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🟦 SaaS / Hosted Platforms](#-saas--hosted-platforms)
+- [🟩 Open-Source Software](#-open-source-software)
+- [📊 Feature Comparison Matrix](#-feature-comparison-matrix)
+- [🎯 Selection & Architecture Guide](#-selection--architecture-guide)
+- [⭐ Star History](#-star-history)
+- [💖 Support](#-support)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
 ## 🌐 Sector Overview & Market Dynamics
 
-The global enterprise email, corporate webmail, and secure communication market is estimated at **$28.5 billion to $33 billion in 2026** (projected to exceed $55 billion by 2032 at a ~9.2% CAGR), driven by zero-trust architecture mandates, regulatory compliance (GDPR, HIPAA, NIS2, SOC 2), and escalating sophisticated BEC (business email compromise) threats. 
+The global enterprise email, corporate webmail, and secure communication market is estimated at **$28.5 billion to $33 billion in 2026** (projected to exceed $55 billion by 2032 at a ~9.2% CAGR), driven by zero-trust architecture mandates, regulatory compliance (GDPR, HIPAA, NIS2, SOC 2), and escalating sophisticated BEC (business email compromise) threats. 📈
 
-Market dynamics exhibit an **extreme concentration at the top with a highly fragmented privacy and self-hosted long tail**: Microsoft 365 (Exchange Online) and Google Workspace operate as a near-duopoly commanding >85% of total enterprise seats ("winner-take-most" bundled productivity suites), while privacy-first zero-access providers (Proton, Tuta, Mailbox.org) and open-source self-hosted mail infrastructures (docker-mailserver, Stalwart, Mailcow) capture specialized niches demanding rigorous data sovereignty, zero-knowledge encryption, and exemption from proprietary telemetry.
+Market dynamics exhibit an **extreme concentration at the top with a highly fragmented privacy and self-hosted long tail**: Microsoft 365 (Exchange Online) and Google Workspace operate as a near-duopoly commanding >85% of total enterprise seats ("winner-take-most" bundled productivity suites), while privacy-first zero-access providers (Proton, Tuta, Mailbox.org) and open-source self-hosted mail infrastructures (docker-mailserver, Stalwart, Mailcow) capture specialized niches demanding rigorous data sovereignty, zero-knowledge encryption, and exemption from proprietary telemetry. 🌐🔒
 
 ---
 
 ## 🟦 SaaS / Hosted Platforms
 
-Commercial, cloud-hosted corporate email and webmail suites sorted in descending order of company size (valuation / annual revenue).
+Commercial, cloud-hosted corporate email and webmail suites sorted in descending order of company size (valuation / annual revenue). 💼
 
-| Provider | Company Scale (Valuation / Revenue) | Starting Pricing (Paid) | Free Tier Limits / Free Trial | Key Security & Cryptography | Primary Use Case |
+| 🏢 Provider | 💰 Company Scale (Valuation / Revenue) | 🏷️ Starting Pricing (Paid) | 🎁 Free Tier Limits / Free Trial | 🔒 Key Security & Cryptography | 🎯 Primary Use Case |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **[Microsoft 365 (Exchange Online)](https://www.microsoft.com/microsoft-365/exchange/exchange-online)** | **$3.1 Trillion market cap** (~$245B annual revenue) | **$6.00/user/month** (Exchange Online Plan 1, annual commitment) | **30-day free trial** (up to 25 user seats, 50 GB mailbox storage per user, full Purview compliance trial) | Defender for O365 sandboxing, Safe Links, OME, S/MIME, Azure RMS, Entra ID Conditional Access | Enterprises requiring deep compliance, DLP, and native Outlook ecosystem |
 | **[Google Workspace](https://workspace.google.com/)** | **$2.2 Trillion market cap** (Alphabet; ~$350B annual revenue) | **$6.00/user/month** (Business Starter, annual commitment; or $7.20/user/month flexible) | **14-day free trial** (up to 10 user seats, 30 GB pooled storage per user, full Google Workspace apps) | Zero-trust context-aware access, Google Safe Browsing, S/MIME (Enterprise tiers), Vault eDiscovery | Modern businesses prioritizing real-time collaboration and cloud-native workflows |
@@ -55,9 +60,9 @@ Commercial, cloud-hosted corporate email and webmail suites sorted in descending
 
 ## 🟩 Open-Source Software
 
-Self-hosted, community-driven corporate email and webmail systems, groupware servers, and containerized mail stacks. Sorted in descending order of GitHub stargazers:
+Self-hosted, community-driven corporate email and webmail systems, groupware servers, and containerized mail stacks. Sorted in descending order of GitHub stargazers: 🌟
 
-| Software & Star Badge | Stack / Language | License | Custom Domains | Built-in Webmail | Architecture Highlights |
+| 📦 Software & Star Badge | 🛠️ Stack / Language | 📜 License | 🌐 Custom Domains | 💻 Built-in Webmail | ⚡ Architecture Highlights |
 | :--- | :--- | :--- | :---: | :---: | :--- |
 | **[docker-mailserver](https://github.com/docker-mailserver/docker-mailserver)** [![Stars](https://img.shields.io/github/stars/docker-mailserver/docker-mailserver?style=social&color=white)](https://github.com/docker-mailserver/docker-mailserver/stargazers) | Docker / Postfix / Dovecot | MIT | ✅ | Optional (integrates Roundcube/SnappyMail) | Battle-tested, full-featured containerized mail server. Features automated configuration, SpamAssassin/Rspamd, ClamAV, OpenDKIM, and Fail2ban out of the box. |
 | **[Stalwart](https://github.com/stalwartlabs/stalwart)** [![Stars](https://img.shields.io/github/stars/stalwartlabs/stalwart?style=social&color=white)](https://github.com/stalwartlabs/stalwart/stargazers) | Rust | AGPL-3.0 | ✅ | Optional (Web Admin & WebDAV) | All-in-one scalable mail and collaboration server written in memory-safe Rust. Native support for JMAP, IMAP4, SMTP, CalDAV, CardDAV, and Sieve. |
@@ -77,7 +82,7 @@ Self-hosted, community-driven corporate email and webmail systems, groupware ser
 
 ## 📊 Feature Comparison Matrix
 
-| Solution | Deployment | License | Custom Domains | Encryption At-Rest / In-Transit | IMAP / POP3 / SMTP | ActiveSync / CalDAV / CardDAV |
+| 🛠️ Solution | 🚀 Deployment | 📜 License | 🌐 Custom Domains | 🔐 Encryption At-Rest / In-Transit | 📬 IMAP / POP3 / SMTP | 🔄 ActiveSync / CalDAV / CardDAV |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Microsoft 365** | Cloud SaaS | Commercial | ✅ | BitLocker, TLS, S/MIME, OME | ✅ | Native Exchange / ActiveSync |
 | **Google Workspace** | Cloud SaaS | Commercial | ✅ | AES-256, TLS, S/MIME (Ent+) | ✅ | CalDAV, CardDAV, Gmail API |
@@ -103,26 +108,45 @@ Self-hosted, community-driven corporate email and webmail systems, groupware ser
 
 ## 🎯 Selection & Architecture Guide
 
-Choosing between SaaS corporate email and self-hosted open-source groupware depends on your operational capacity and regulatory obligations:
+Choosing between SaaS corporate email and self-hosted open-source groupware depends on your operational capacity and regulatory obligations: 🧭
 
-1. **Enterprise Productivity & Compliance:**
+1. **🏢 Enterprise Productivity & Compliance:**
    - Choose **Microsoft 365** if your organization requires automated eDiscovery, legal hold, Purview DLP, and tight Windows/Outlook Active Directory integration.
    - Choose **Google Workspace** for agile startups needing seamless Google Docs/Meet synergy and straightforward administration.
 
-2. **Zero-Trust Privacy & Anti-Surveillance:**
+2. **🔐 Zero-Trust Privacy & Anti-Surveillance:**
    - Choose **Proton Mail Business** for Swiss-jurisdiction zero-access encryption while retaining desktop clients via Proton Bridge.
    - Choose **Tuta Business** for maximum resistance against quantum computing decryption (TutaCrypt) and encrypted metadata.
 
-3. **Self-Hosted Complete Suites:**
+3. **🚀 Self-Hosted Complete Suites:**
    - Choose **mailcow: dockerized** or **grommunio** for an out-of-the-box Exchange replacement with ActiveSync mobile synchronization and a webmail UI.
    - Choose **docker-mailserver** for a robust headless mail infrastructure configured via clean environment variables and files.
    - Choose **Stalwart** for a state-of-the-art Rust implementation supporting JMAP and modern web standards.
 
 ---
 
+## 📈 Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Secure-Corporate-Email-Webmail&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Secure-Corporate-Email-Webmail&type=date&legend=top-left)
+
+---
+
+## 💖 Support
+
+Thank you for exploring this curated repository! If you find this resource helpful for evaluating, configuring, or hardening secure email systems, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it on GitHub.
+- 🍴 **Fork the repo** to contribute additions or maintain your own tailored reference.
+- 📢 **Share with peers, sysadmins, and cybersecurity teams** on Discord, LinkedIn, X/Twitter, or Reddit.
+- ☕ **Buy a coffee or sponsor ongoing maintenance:** Support our open-source efforts via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Your support keeps this collection actively maintained, verified, and up-to-date! 🙏
+
+---
+
 ## 🤝 Contributing
 
-Contributions, fixes, and recommendations are welcome! Please follow these criteria:
+Contributions, fixes, and recommendations are welcome! Please follow these criteria: 💡
 - Open-source tools must be actively maintained (commit/release within the last 12 months) and have a clean permissive or copyleft license.
 - To suggest additions, submit a Pull Request specifying:
   - Repository link and official website
@@ -133,7 +157,7 @@ Contributions, fixes, and recommendations are welcome! Please follow these crite
 
 ## 📄 License
 
-This repository and curated list are licensed under [CC0 1.0 Universal](LICENSE) (Public Domain Dedication). All linked software projects and trademarks remain property of their respective owners.
+This repository and curated list are licensed under [CC0 1.0 Universal](LICENSE) (Public Domain Dedication). All linked software projects and trademarks remain property of their respective owners. ⚖️
 
 <div align="center">
   <sub>Maintained with ❤️ for secure corporate communications and digital sovereignty.</sub>
